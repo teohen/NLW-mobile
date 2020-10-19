@@ -20,7 +20,7 @@ export default function Routes(){
                     cardStyle: { backgroundColor: "#f2f3f5"}
                 }
             }>
-                <Screen name="Orphanages" component={OrphanagesMap}/>
+                <Screen name="OrphanagesMap" component={OrphanagesMap}/>
                 <Screen name="OrphanageDetails" options={{
                                       headerShown: true,
                                       header: () => <Header  showCancel={false} title="Orfanato"/>
