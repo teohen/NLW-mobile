@@ -10,7 +10,6 @@ import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
 import { useEffect } from "react";
 import api from "../services/api";
-import { or } from "react-native-reanimated";
 
 
 interface Orphanage {
@@ -28,7 +27,7 @@ export default function OrphanagesMap() {
     api.get("orphanages").then(response => {
       setOrphanages(response.data)
     })
-  })
+  }, [])
 
     const navigation = useNavigation();
 
