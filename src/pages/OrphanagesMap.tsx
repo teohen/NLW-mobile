@@ -7,6 +7,7 @@ import { Feather } from "@expo/vector-icons";
 import mapMarker from "./../images/map-marker.png";
 
 import { useNavigation } from "@react-navigation/native";
+import { RectButton } from "react-native-gesture-handler";
 
 
 export default function OrphanagesMap() {
@@ -15,6 +16,10 @@ export default function OrphanagesMap() {
 
     function handleNavigateToOrphanageDetails(){
         navigation.navigate("OrphanageDetails")
+    }
+
+    function handleNavigateToCreateOrphanage(){
+        navigation.navigate("SelectMapPosition")
     }
 
     return (
@@ -54,9 +59,9 @@ export default function OrphanagesMap() {
         <Text style={styles.footerText}>
           2 orfanatos encontrados
         </Text>
-        <TouchableOpacity style={styles.createOrphanageButton}>
+        <RectButton style={styles.createOrphanageButton} onPress={handleNavigateToCreateOrphanage}>
           <Feather name="plus" size={20} color="#FFF"></Feather>
-        </TouchableOpacity>
+        </RectButton>
       </View>
     </View>
   );
